@@ -16,22 +16,22 @@ public class CustomFontTextView extends TextView {
     public CustomFontTextView(Context context) {
         super(context);
 
-        applyCustomFont(context, null);
+        applyCustomFont(this, context, null);
     }
 
     public CustomFontTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        applyCustomFont(context, attrs);
+        applyCustomFont(this, context, attrs);
     }
 
     public CustomFontTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        applyCustomFont(context, attrs);
+        applyCustomFont(this, context, attrs);
     }
 
-    private void applyCustomFont(Context context, AttributeSet attrs) {
+    public static void applyCustomFont(TextView customFontTextView, Context context, AttributeSet attrs) {
         TypedArray attributeArray = context.obtainStyledAttributes(
                 attrs,
                 R.styleable.CustomFontTextView);
@@ -40,12 +40,12 @@ public class CustomFontTextView extends TextView {
         int textStyle = attrs.getAttributeIntValue(ANDROID_SCHEMA, "textStyle", 0);
 
         Typeface customFont = selectTypeface(context, fontName, textStyle);
-        setTypeface(customFont);
+        customFontTextView.setTypeface(customFont);
 
         attributeArray.recycle();
     }
 
-    private Typeface selectTypeface(Context context, String fontName, int textStyle) {
+    private static Typeface selectTypeface(Context context, String fontName, int textStyle) {
         if (fontName.contentEquals(context.getString(R.string.font_name_fontawesome))) {
             return FontCache.getTypeface("fontawesome.ttf", context);
         }
