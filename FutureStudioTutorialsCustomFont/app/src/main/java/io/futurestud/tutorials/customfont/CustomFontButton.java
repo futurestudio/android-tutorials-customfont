@@ -12,18 +12,18 @@ public class CustomFontButton extends Button {
     public CustomFontButton(Context context) {
         super(context);
 
-        CustomFontTextView.applyCustomFont(this, context, null);
+        CustomFontUtils.applyCustomFont(this, context, null);
     }
 
     public CustomFontButton(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        CustomFontTextView.applyCustomFont(this, context, attrs);
+        CustomFontUtils.applyCustomFont(this, context, attrs);
     }
 
     public CustomFontButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        CustomFontTextView.applyCustomFont(this, context, attrs);
+        CustomFontUtils.applyCustomFont(this, context, attrs);
     }
 }
