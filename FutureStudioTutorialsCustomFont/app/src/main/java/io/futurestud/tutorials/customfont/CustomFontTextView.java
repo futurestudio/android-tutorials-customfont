@@ -33,27 +33,25 @@ public class CustomFontTextView extends TextView {
     private void applyCustomFont(Context context, AttributeSet attrs) {
         int textStyle = attrs.getAttributeIntValue(ANDROID_SCHEMA, "textStyle", 0);
 
-        Typeface customFont;
+        Typeface customFont = selectTypeface(context, textStyle);
+        setTypeface(customFont);
+    }
 
+    private Typeface selectTypeface(Context context, int textStyle) {
         /*
          information about the TextView textStyle:
          http://developer.android.com/reference/android/R.styleable.html#TextView_textStyle
           */
         switch (textStyle) {
             case 1: // bold
-                customFont = FontCache.getTypeface("SourceSansPro-Bold.ttf", context);
-                break;
+                return FontCache.getTypeface("SourceSansPro-Bold.ttf", context);
 
             case 2: // italic
-                customFont = FontCache.getTypeface("SourceSansPro-Italic.ttf", context);
-                break;
+                return FontCache.getTypeface("SourceSansPro-Italic.ttf", context);
 
             case 0: // regular
             default:
-                customFont = FontCache.getTypeface("SourceSansPro-Regular.ttf", context);
-
+                return FontCache.getTypeface("SourceSansPro-Regular.ttf", context);
         }
-
-        setTypeface(customFont);
     }
 }
