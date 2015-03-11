@@ -11,6 +11,22 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+
+    productFlavors {
+        customerWithFontSourceSans {
+            applicationId "io.futurestud.tutorials.customfont.a"
+            versionCode 1
+            versionName "1.0.0"
+        }
+
+        customerWithFontRaleway {
+            applicationId "io.futurestud.tutorials.customfont.b"
+            versionCode 1
+            versionName "1.0.0"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
