@@ -9,8 +9,6 @@ import android.widget.TextView;
  */
 public class CustomFontTextView extends TextView {
 
-    public static final String ANDROID_SCHEMA = "http://schemas.android.com/apk/res/android";
-
     public CustomFontTextView(Context context) {
         super(context);
 

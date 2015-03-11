@@ -17,7 +17,7 @@
         android:layout_margin="12dp"
         android:text="http://futurestud.io/blog/"
         android:textSize="18sp"
-        app:font="@string/font_name_source_sans_pro"/>
+        app:font="@string/font_name_customer"/>
 
     <io.futurestud.tutorials.customfont.CustomFontTextView
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:text="http://futurestud.io/blog/"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:font="@string/font_name_source_sans_pro"/>
+        app:font="@string/font_name_customer"/>
 
     <io.futurestud.tutorials.customfont.CustomFontTextView
         android:layout_width="wrap_content"
@@ -35,30 +35,13 @@
         android:text="http://futurestud.io/blog/"
         android:textSize="18sp"
         android:textStyle="italic"
-        app:font="@string/font_name_source_sans_pro"/>
+        app:font="@string/font_name_customer"/>
 
     <io.futurestud.tutorials.customfont.CustomFontTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:text="&#xf135;&#xf135;&#xf135;&#xf135;&#xf135;"
-        android:textSize="18sp"
-        app:font="@string/font_name_fontawesome"/>
-
-    <io.futurestud.tutorials.customfont.CustomFontButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:text="Future Studio Blog"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:font="@string/font_name_source_sans_pro"/>
-
-    <io.futurestud.tutorials.customfont.CustomFontButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:text="&#xf135; Future Studio &#xf135;"
         android:textSize="18sp"
         app:font="@string/font_name_fontawesome"/>
 

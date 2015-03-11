@@ -31,21 +31,21 @@ public class CustomFontUtils {
         if (fontName.contentEquals(context.getString(R.string.font_name_fontawesome))) {
             return FontCache.getTypeface("fontawesome.ttf", context);
         }
-        else if (fontName.contentEquals(context.getString(R.string.font_name_source_sans_pro))) {
+        else if (fontName.contentEquals(context.getString(R.string.font_name_customer))) {
             /*
             information about the TextView textStyle:
             http://developer.android.com/reference/android/R.styleable.html#TextView_textStyle
             */
             switch (textStyle) {
                 case 1: // bold
-                    return FontCache.getTypeface("SourceSansPro-Bold.ttf", context);
+                    return FontCache.getTypeface(context.getString(R.string.font_name_customer) + "-Bold.ttf", context);
 
                 case 2: // italic
-                    return FontCache.getTypeface("SourceSansPro-Italic.ttf", context);
+                    return FontCache.getTypeface(context.getString(R.string.font_name_customer) + "-Italic.ttf", context);
 
                 case 0: // regular
                 default:
-                    return FontCache.getTypeface("SourceSansPro-Regular.ttf", context);
+                    return FontCache.getTypeface(context.getString(R.string.font_name_customer) + "-Regular.ttf", context);
             }
         }
         else {
