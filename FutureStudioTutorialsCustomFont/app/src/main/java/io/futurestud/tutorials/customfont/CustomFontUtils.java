@@ -19,7 +19,7 @@ public class CustomFontUtils {
                 R.styleable.CustomFontTextView);
 
         String fontName = attributeArray.getString(R.styleable.CustomFontTextView_font);
-        int textStyle = attrs.getAttributeIntValue(ANDROID_SCHEMA, "textStyle", 0);
+        int textStyle = attrs.getAttributeIntValue(ANDROID_SCHEMA, "textStyle", Typeface.NORMAL);
 
         Typeface customFont = selectTypeface(context, fontName, textStyle);
         customFontTextView.setTypeface(customFont);
@@ -37,13 +37,16 @@ public class CustomFontUtils {
             http://developer.android.com/reference/android/R.styleable.html#TextView_textStyle
             */
             switch (textStyle) {
-                case 1: // bold
+                case Typeface.BOLD: // bold
                     return FontCache.getTypeface("SourceSansPro-Bold.ttf", context);
 
-                case 2: // italic
+                case Typeface.ITALIC: // italic
                     return FontCache.getTypeface("SourceSansPro-Italic.ttf", context);
 
-                case 0: // regular
+                case Typeface.BOLD_ITALIC: // bold italic
+                    return FontCache.getTypeface("SourceSansPro-BoldItalic.ttf", context);
+
+                case Typeface.NORMAL: // regular
                 default:
                     return FontCache.getTypeface("SourceSansPro-Regular.ttf", context);
             }
