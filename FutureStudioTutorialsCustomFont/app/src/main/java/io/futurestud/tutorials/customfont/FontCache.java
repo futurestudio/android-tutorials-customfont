@@ -3,7 +3,7 @@ package io.futurestud.tutorials.customfont;
 import android.content.Context;
 import android.graphics.Typeface;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 /**
  * Created by norman on 3/8/15.
@@ -13,7 +13,7 @@ import java.util.Hashtable;
  */
 public class FontCache {
 
-    private static Hashtable<String, Typeface> fontCache = new Hashtable<>();
+    private static HashMap<String, Typeface> fontCache = new HashMap<>();
 
     public static Typeface getTypeface(String fontname, Context context) {
         Typeface typeface = fontCache.get(fontname);
